@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5174:5174"
+    volumes:
+      - ./src:/app/src  # Solo montar el código fuente, no los node_modules
+      - ./public:/app/public
+    
